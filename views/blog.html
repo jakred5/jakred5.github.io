@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Blog</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="/views/blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="/views/runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="/views/animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="/views/pokemonHome.html">Pokemon Stats</a>
+            </nav>
+        </header>
+        <main>
+            <section class="heading">
+                <h1>My Blog</h1>
+                <button id="newPostBlogButton" class="newPostButton" onclick="showInsertBlogPost()">New Post</button>
+                <div class="insertPost" id="insertBlog">
+                    <h2>Insert Post</h2>
+                    <textarea id="postContent"></textarea>
+                    <br>
+                    <button class="submitPostButton" onclick="postBlog()">Post</button>
+                    <button class="submitPostButton" onclick="hideInsertBlogPost()"> Cancel</button>
+                </div>
+            </section>
+            <section id="blogContent" class="content"></section>
+        </main>
+        <script src="../js/authentication.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src="/js/postBlog.js"></script>
+    </body>
+</html>

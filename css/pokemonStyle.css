@@ -1,0 +1,96 @@
+.mainTable{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px;
+}
+
+.mainTable td, th{
+    border: 1px solid #C4C4C4;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.mainTable th {
+    cursor: pointer;
+}
+
+.headerOrder {
+    background-color: #E2D0E0;
+}
+
+.regularHeader {
+    background-color: #E1E1D9;
+}
+
+.mainTable td {
+    font-weight: bold;
+}
+
+.pokemonName {
+    color: #215aa4;
+}
+
+.filterList {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.statRange {
+    margin-left: 20px;
+}
+
+.statRangeInput {
+    width: 50px;
+}
+
+.cursorLink {
+    cursor: pointer;
+}
+
+.cursorLink:hover {
+    color: red;
+}
+
+.backButton {
+    margin-top: 20px;
+}
+
+.pokemonInfo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.barType {
+    text-align: right;
+    padding: 5px;
+}
+
+.barStatDiv {
+    text-align: left;
+    padding: 5px;
+    width: 400px;
+}
+
+.barStat {
+    text-align: right;
+}
+
+.barDiv {
+    background-color: #ffcc00;
+    height: 10px;
+}
+
+.calculatorDiv {
+    margin-top: 30px;
+}
+
+.calculatorDiv input{
+    margin: 5px 25px 12px 0px;
+    width: 50px;
+}
+
+.levelInput {
+    margin-left: 20px;
+}

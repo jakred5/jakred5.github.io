@@ -1,0 +1,678 @@
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+html, body {
+    background-color: steelblue;
+    margin: 0px;
+    padding: 0px;
+    font-family: none;
+    visibility: hidden;
+}
+
+nav {
+    background-color: #313433;
+    font-size: 24px;
+    padding: 5px;
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    background-color: darkgrey;
+}
+
+.interests {
+    margin-left: 25px;
+}
+
+.navDivider {
+    color: grey;
+}
+
+.insertPost {
+    background-color: #99CC99;
+    width: 40%;
+    height: 300px;
+    margin: auto;
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    text-align: center;
+    z-index: 100px;
+    display: none;
+}
+.content article{
+    background-color: #99CC99;
+    display: inline-block;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    width: 35%;
+    height: 300px;
+    margin-left: 10%;
+    margin-top: 50px;
+    color: black;
+    vertical-align: top;
+}
+
+.postBody {
+    height: 235px;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.content header{
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content footer{
+    height: 30px;
+    text-align: center;
+}
+
+.postNumber {
+    display: inline-block;
+    width: calc(100% - 20px);
+    vertical-align: top;
+}
+
+.removeIcon {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.removeIcon:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.addIcon {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.addIcon:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.viewButton{
+    background-color: #2B5192;
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    width: 80%;
+    height: 50%;
+}
+
+.submitPostButton{
+    background-color: #2B5192;
+    margin-top: 5%;
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.newPostButton {
+    background-color: #2B5192;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.heading {
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 50px;
+}
+
+.viewPostContent {
+    background-color: #99CC99;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: black;
+    vertical-align: top;
+}
+
+#viewPostContent header {
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+#viewPostContent header span{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.viewPostBody {
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space: pre-wrap
+}
+
+.createForm {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+.timeData input {
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.distanceInput{
+    width: 75px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.dateInput {
+    padding: 5px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.createForm label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#about {
+    color: white;
+}
+
+.heading h1 {
+    color: white;
+}
+
+.createForm tr td:first-child {
+    text-align: right;
+    width: 40%;
+}
+
+.createForm tr td:last-child {
+    text-align: left;
+}
+
+.runDisplayContent {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.runChartSection {
+    text-align: center;
+    background-color: #99CC99;
+    width: 750px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    color: black;
+}
+
+.runChartSection select{
+    display: block;
+    margin: auto;
+}
+
+.animeBackButtonDiv {
+    text-align: center;
+}
+
+.backButton {
+    margin-top: 50px;
+}
+
+#createAnime {
+    height: 200px;
+}
+
+#accordion {
+    margin: 50px;
+    font-family: none;
+}
+
+#accordion .ui-accordion-header {
+    color: #2B5192;
+    font-weight: bold;
+}
+
+#accordion .ui-accordion-content {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8ffe8+0,e3f5ab+33,b7df2d+100;Green+3D+%234 */
+background: #f8ffe8; /* Old browsers */
+background: -moz-linear-gradient(top,  #f8ffe8 0%, #e3f5ab 33%, #b7df2d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=0 ); /* IE6-9 */
+}
+
+.seasonDescription {
+    vertical-align: top;
+    color: black;
+    font-size: 14px;
+    margin-left: 20px;
+    display: inline-block;
+    max-width: 750px;
+}
+
+.createForm td textarea {
+    height: 100px;
+    width: 100%;
+    resize: none;
+}
+
+.episodeList {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    -webkit-padding-start: 0;
+    justify-content: center;
+}
+
+.episodeList li{
+    height: 200px;
+    width: 500px;
+    background-color: coral;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+.episodeList li:nth-child(odd){
+    margin-right: 30px;
+}
+
+.episodeContent {
+    display: inline-block;
+    width: 300px;
+    vertical-align: top;
+    height: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.episodeContent > span {
+    height: 40px;
+    display: block;
+}
+
+.episodeNumber {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 42px;
+}
+
+.episodeTitle {
+    font-size: 14px;
+}
+
+.airDate {
+    font-size: 12px;
+}
+
+.rating {
+    float: left;
+    margin-left: 19px;
+    position: absolute;
+    top: 160px;
+}
+
+.rating > input {
+    display: none;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:125%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:before {
+    content: '★ ';
+}
+
+
+
+.rating > input:checked ~ label {
+    color: gold;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:hover,
+.rating > label:hover ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+.removeEpisode {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.removeEpisode:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.editEpisode {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.editEpisode:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.review {
+    font-size: 12px;
+    width: 300px;
+    min-height: 200px;
+    background-color: #2F2F2F;
+    z-index: 100;
+    position: absolute;
+    right: 50px;
+    bottom: 210px;
+    display: none;
+    color: white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.review textarea {
+    margin-top: 10px;
+    height: 140px;
+    width: 250px;
+    color: black;
+    display: none;
+}
+
+.review span {
+    top: 10px;
+    position: absolute;
+    left: 5px;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.review button {
+    position: absolute;
+    bottom: 5px;
+    width: 50px;
+    left: 110px;
+    background-color: #2B5192;
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.viewAllEpisdoesButton {
+    width: 150px;
+}
+
+#episodeList {
+    margin-top: 100px;
+}
+
+.runDataPage {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mainTable{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 95%;
+    margin: 20px;
+}
+
+.mainTable td, th{
+    border: 1px solid #C4C4C4;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.mainTable th {
+    cursor: pointer;
+}
+
+.headerOrder {
+    background-color: #E2D0E0;
+}
+
+.regularHeader {
+    background-color: #E1E1D9;
+}
+
+.mainTable td {
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
+.pokemonName {
+    color: #215aa4;
+}
+
+.filterList {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.statRange {
+    margin-left: 20px;
+}
+
+.statRangeInput {
+    width: 50px;
+}
+
+.cursorLink {
+    cursor: pointer;
+}
+
+.cursorLink:hover {
+    color: red;
+}
+
+.backButton {
+    margin-top: 20px;
+}
+
+.pokemonInfo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.barType {
+    text-align: right;
+    padding: 5px;
+}
+
+.barStatDiv {
+    text-align: left;
+    padding: 5px;
+    width: 400px;
+}
+
+.barStat {
+    text-align: right;
+}
+
+.barDiv {
+    background-color: #ffcc00;
+    height: 10px;
+}
+
+.statDisplayDiv {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #99CC99;
+    width: 1000px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.statDisplayDiv h1 {
+    margin-top: 10px;
+}
+
+.statDisplayDiv input{
+    margin: 5px 25px 12px 0px;
+    width: 50px;
+}
+
+.levelInput {
+    margin-left: 20px;
+}
+
+.typeBlock {
+    border-radius: 2px;
+    padding: 2px 10px;
+    color: white;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.typeBlock.Fire {
+    background: linear-gradient(#f08030,#dd6610);
+    border-color: #B4530D;
+}
+
+.typeBlock.Flying {
+    background: linear-gradient(#a890f0,#9180c4);
+    border-color: #7762B6;
+}
+
+.typeBlock.Bug {
+    background: linear-gradient(#a8b820,#8d9a1b);
+    border-color: #616B13;
+}
+
+.typeBlock.Dark {
+    background: linear-gradient(#705848,#513f34);
+    border-color: #362A23;
+}
+
+.typeBlock.Dragon {
+    background: linear-gradient(#7038f8,#4c08ef);
+    border-color: #3D07C0;
+}
+
+.typeBlock.Electric {
+    background: linear-gradient(#f8d030,#f0c108);
+    border-color: #C19B07;
+}
+
+.typeBlock.Fairy {
+    background: linear-gradient(#F98CFF,#F540FF);
+    border-color: #C1079B;
+}
+
+.typeBlock.Fighting {
+    background: linear-gradient(#c03028,#9d2721);
+    border-color: #82211B;
+}
+
+.typeBlock.Ghost {
+    background: linear-gradient(#705898,#554374);
+    border-color: #413359;
+}
+
+.typeBlock.Grass {
+    background: linear-gradient(#78c850,#5ca935);
+    border-color: #4A892B;
+}
+
+.typeBlock.Ground {
+    background: linear-gradient(#e0c068,#d4a82f);
+    border-color: #AA8623;
+}
+
+.typeBlock.Ice {
+    background: linear-gradient(#98d8d8,#69c6c6);
+    border-color: #45B6B6;
+}
+
+.typeBlock.Normal {
+    background: linear-gradient(#a8a878,#8a8a59);
+    border-color: #79794E;
+}
+
+.typeBlock.Poison {
+    background: linear-gradient(#a040a0,#803380);
+    border-color: #662966;
+}
+
+.typeBlock.Psychic {
+    background: linear-gradient(#f85888,#f61c5d);
+    border-color: #D60945;
+}
+
+.typeBlock.Rock {
+    background: linear-gradient(#b8a038,#93802d);
+    border-color: #746523;
+}
+
+.typeBlock.Steel {
+    background: linear-gradient(#b8b8d0,#9797ba);
+    border-color: #7A7AA7;
+}
+
+.typeBlock.Water {
+    background: linear-gradient(#6890f0,#386ceb);
+    border-color: #1753E3;
+}
