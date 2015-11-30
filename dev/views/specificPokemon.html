@@ -1,0 +1,131 @@
+<div>
+    <div class="animeBackButtonDiv">
+        <button class="newPostButton backButton" ng-click="backToList()">Back</button>
+    </div>
+</div>
+<div class="pokemonInfo">
+    <div class="statDisplayDiv">
+        <h1>{{currentPokemon.name}}</h1>
+        <span>Types: {{currentPokemon.types}}</span>
+        <table align="center">
+            <tr>
+                <td class="barType">
+                   <span>HP:</span>
+                </td>
+                <td class="barStat">
+                    {{currentPokemon.hp}}
+                </td>
+                <td class="barStatDiv">
+                    <div class="barDiv" ng-style="barIndicators.hp"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="barType">
+                   <span>Attack: </span>
+                </td>
+                <td class="barStat">
+                    {{currentPokemon.attack}}
+                </td>
+                <td class="barStatDiv">
+                    <div class="barDiv" ng-style="barIndicators.attack"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="barType">
+                   <span>Defense: </span>
+                </td>
+                <td class="barStat">
+                    {{currentPokemon.defense}}
+                </td>
+                <td class="barStatDiv">
+                    <div class="barDiv" ng-style="barIndicators.defense"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="barType">
+                   <span>Special Attack: </span>
+                </td>
+                <td class="barStat">
+                    {{currentPokemon.specialAttack}}
+                </td>
+                <td class="barStatDiv">
+                    <div class="barDiv" ng-style="barIndicators.specialAttack"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="barType">
+                   <span>SpecialDefense: </span>
+                </td>
+                <td class="barStat">
+                    {{currentPokemon.specialDefense}}
+                </td>
+                <td class="barStatDiv">
+                    <div class="barDiv" ng-style="barIndicators.specialDefense"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="barType">
+                   <span>Speed: </span>
+                </td>
+                <td class="barStat">
+                    {{currentPokemon.speed}}
+                </td>
+                <td class="barStatDiv">
+                    <div class="barDiv" ng-style="barIndicators.speed"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="barType">
+                   <span>Total: </span>
+                </td>
+                <td class="barStat">
+                    {{currentPokemon.total}}
+                </td>
+                <td class="barStatDiv">
+                    <div class="barDiv" ng-style="barIndicators.total"></div>
+                </td>
+            </tr>       
+        </table>
+    </div>
+    <div class="statDisplayDiv">
+        <h1>Calculate Stats</h1>
+        <div>
+            <label>Nature:&nbsp;</label>
+            <select ng-model="options.nature">
+                <option value="Neutral">Neutral</option>
+                <option ng-repeat="nature in natures" value="{{nature.effect}}">
+                    {{nature.name}} (+{{nature.displayName[0]}}, -{{nature.displayName[1]}})
+                </option>
+            </select>
+            <label class="levelInput">Level:&nbsp;</label>
+            <input type="text" ng-model="options.level">{{level}}{{JSON.stringify(natureMulitplier)}}
+        </div>
+        <div class="evDiv">
+            <h4>EV's</h4>
+            <label>HP:&nbsp;</label><input type="text" ng-model="ev.hp">
+            <label>Attack:&nbsp;</label><input type="text" ng-model="ev.attack">
+            <label>Defense:&nbsp;</label><input type="text" ng-model="ev.defense">
+            <label>Special Attack:&nbsp;</label><input type="text" ng-model="ev.specialAttack">
+            <label>Special Defense:&nbsp;</label><input type="text" ng-model="ev.specialDefense">
+            <label>Speed:&nbsp;</label><input type="text" ng-model="ev.speed">
+        </div>
+        <div class="ivDiv">
+            <h4>IV's</h4>
+            <label>HP:&nbsp;</label><input type="text" ng-model="iv.hp">
+            <label>Attack:&nbsp;</label><input type="text" ng-model="iv.attack">
+            <label>Defense:&nbsp;</label><input type="text" ng-model="iv.defense">
+            <label>Special Attack:&nbsp;</label><input type="text" ng-model="iv.specialAttack">
+            <label>Special Defense:&nbsp;</label><input type="text" ng-model="iv.specialDefense">
+            <label>Speed:&nbsp;</label><input type="text" ng-model="iv.speed">
+        </div>
+        <div>
+            <h4>Totals</h4>
+            <p>HP: {{calculateHP()}}</p>
+            <p>Attack: {{calculateStat('attack')}}</p>
+            <p>Defense: {{calculateStat('defense')}}</p>
+            <p>Special Attack: {{calculateStat('specialAttack')}}</p>
+            <p>Special Defense: {{calculateStat('specialDefense')}}</p>
+            <p>Speed: {{calculateStat('speed')}}</p>
+        </div>
+    </div>
+</div>

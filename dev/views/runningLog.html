@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Running Log</title>
+        <!-- build:css ../css/combinedRunningLog.min.css -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="pokemonHome.html">Pokemon Stats</a>
+            </nav>
+        </header>
+        <main>
+            <section class="heading">
+                <h1>My Running Log</h1>
+                <button id="newPostRunButton" class="newPostButton" onclick="showInsertRunPost()">New Run</button>
+                <button id="viewRunDataButton" class="newPostButton" onclick="viewRunData()">View Data</button>
+                <div class="insertPost" id="insertRun">
+                    <h2>Insert Run</h2>
+                    <form onsubmit="postRun(); return false;" id="runForm">
+                        <table class="createForm">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label>Distance:&nbsp;</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" id="distance" class="distanceInput" 
+                                        step="0.01" min="0" max="99.99">&nbsp;miles
+                                    </td>
+                                </tr>
+                                <tr class="timeData">
+                                    <td>
+                                        <label>Time:&nbsp;</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" id="hours" placeholder="HH" min="0" max="99">&nbsp;:&nbsp;
+                                        <input type="number" id="minutes" placeholder="MM" min="0" max="60">&nbsp;:&nbsp;
+                                        <input type="number" id="seconds" placeholder="SS" min="0" max="60">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Date:&nbsp;</label>
+                                    </td>
+                                    <td>
+                                        <input class="dateInput" id="date" type="date" required>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="submitPostButton">Post</button>
+                        <button type="button" class="submitPostButton" onclick="hideInsertRunPost()">Cancel</button>
+                    </form>
+                </div>
+                <br><br>
+                <div id="sortingChoices">
+                    <select id="sortingOptions" onchange="sortRuns()">
+                        <option value="date">Date</option>
+                        <option value="pace">Pace</option>
+                        <option value="distance">Distance</option>
+                        <option value="time">Time</option>
+                    </select>
+                    <select id="sortingDirection" onchange="sortRuns()">
+                        <option value="1">Asc</option>
+                        <option value="-1">Desc</option>
+                    </select>
+                    </div>
+            </section>
+            <section id="runContent" class="content"></section>
+        </main>
+        <!-- build:js ../js/combinedRunningLog.min.js -->
+        <script src="../js/authentication.js"></script>
+        <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src='/thirdParty/firebase.js'></script>
+        <script src="../js/utils.js"></script>
+        <script src="../js/postRun.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

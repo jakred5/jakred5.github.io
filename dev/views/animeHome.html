@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Anime Home</title>
+        <!-- build:css ../css/combinedAnimeHome.min.css -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="pokemonHome.html">Pokemon Stats</a>
+            </nav>
+        </header>
+        <main>
+            <section class="heading">
+                <h1>My Animes</h1>
+                <button id="newCreateAnimeButton" class="newPostButton" onclick="showCreateAnime()">New Anime</button>
+                <div class="insertPost" id="createAnime">
+                    <h2>Insert Anime</h2>
+                    <form onsubmit="createAnime(); return false;">
+                        <table class="createForm">
+                            <tbody>
+                                <tr>
+                                    <td><label>Name:&nbsp;</label></td>
+                                    <td><input type="text" placeholder="Name" id="animeName" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Image:&nbsp;</label></td>
+                                    <td><input type="text" id="animePicture" placeholder="Image Name" required></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="submitPostButton">Create</button>
+                        <button type="button" class="submitPostButton" onclick="hideCreateAnime()">Cancel</button>
+                    </form>
+                </div>
+            </section>
+            <section id="animeContent" class="content"></section>
+        </main>
+        <!-- build:js ../js/combinedAnimeHome.min.js -->
+        <script src="../js/authentication.js"></script>
+        <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src='/thirdParty/firebase.js'></script>
+        <script src="../js/createAnime.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

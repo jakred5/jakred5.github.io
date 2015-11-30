@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Blog</title>
+        <!-- build:css ../css/combinedBlog.min.css -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="pokemonHome.html">Pokemon Stats</a>
+            </nav>
+        </header>
+        <main>
+            <section class="heading">
+                <h1>My Blog</h1>
+                <button id="newPostBlogButton" class="newPostButton" onclick="showInsertBlogPost()">New Post</button>
+                <div class="insertPost" id="insertBlog">
+                    <h2>Insert Post</h2>
+                    <textarea id="postContent"></textarea>
+                    <br>
+                    <button class="submitPostButton" onclick="postBlog()">Post</button>
+                    <button class="submitPostButton" onclick="hideInsertBlogPost()"> Cancel</button>
+                </div>
+            </section>
+            <section id="blogContent" class="content"></section>
+        </main>
+        <!-- build:js ../js/combinedBlog.min.js -->
+        <script src="../js/authentication.js"></script>
+        <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src='/thirdParty/firebase.js'></script>
+        <script src="../js/postBlog.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

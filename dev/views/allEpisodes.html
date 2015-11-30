@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Anime Episodes</title>
+        <!-- build:css ../css/combinedAllEpisodes.min.css -->
+        <link rel="stylesheet" href="/thirdParty/jquery-ui-1.11.4.custom/jquery-ui.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="pokemonHome.html">Pokemon Stats</a>
+        </header>
+        <main>
+            <div class="animeBackButtonDiv">
+                <a href="animeSeasons.html"><button class="newPostButton backButton">Back</button></a>
+                <button class="newPostButton backButton" onclick="allEpisodeObj.sortByRating()">Sort</button>
+            </div>
+            <ul class="episodeList" id="episodeList">
+            </ul>
+        </main>
+        <!-- build:js ../js/combinedAllEpisodes.min.js -->
+        <script src="../js/authentication.js"></script>
+        <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src="/thirdParty/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+        <script src='/thirdParty/firebase.js'></script>
+        <script src="../js/utils.js"></script>
+        <script src="../js/allEpisodes.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

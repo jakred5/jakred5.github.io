@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Blog Post</title>
+        <!-- build:css ../css/combinedBlogPost.min.css -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="pokemonHome.html">Pokemon Stats</a>
+        </header>
+        <main class="runDataPage">
+            <a href="blog.html"><button class="newPostButton backButton">Back</button></a>
+            <article class="viewPostContent" id="viewPostContent">
+            </article>
+        </main>
+        <!-- build:js ../js/combinedBlogPost.min.js -->
+        <script src="../js/authentication.js"></script>
+        <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src="../js/viewBlogPost.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

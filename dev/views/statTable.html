@@ -1,0 +1,74 @@
+<div class="filterList">
+            <label>Name:&nbsp;</label>
+            <input ng-model="pokemonFilter.name">
+            <label>Type:&nbsp;</label>
+            <select ng-model="pokemonFilter.types">
+                <option value="">All</option>
+                <option ng-repeat="type in types" value="{{type}}">{{type}}</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                <label>Stat:&nbsp;</label>
+                <select ng-model="statFilter.stat">
+                    <option value="none">None</option>
+                    <option ng-repeat="stat in stats" value="{{stat.model}}">{{stat.name}}</option>
+                </select>
+                <span ng-show='statFilter.stat !== "none"'>
+                    <label class="statRange">Between:&nbsp;</label>
+                    <input class="statRangeInput" ng-model="statFilter.from">
+                    <label>-</label>
+                    <input class="statRangeInput" ng-model="statFilter.to">
+                </span>
+            </div>
+            <br>
+            <div>
+            Results: {{filteredList.length}}
+            </div>
+        </div>
+        <div>
+            <table class="mainTable">
+                <tr>
+                    <th ng-click="orderRows('name');" 
+                        ng-class="{headerOrder: headerClasses['name'], regularHeader: !headerClasses['name']}">
+                        Name</th>
+                    <th ng-click="orderRows('types');" 
+                        ng-class="{headerOrder: headerClasses['types'], regularHeader: !headerClasses['types']}">
+                        Type</th>
+                    <th ng-click="orderRows('total');" 
+                        ng-class="{headerOrder: headerClasses['total'], regularHeader: !headerClasses['total']}">
+                        Total</th>
+                    <th ng-click="orderRows('hp');" 
+                        ng-class="{headerOrder: headerClasses['hp'], regularHeader: !headerClasses['hp']}">
+                        HP</th>
+                    <th ng-click="orderRows('attack');" 
+                        ng-class="{headerOrder: headerClasses['attack'], regularHeader: !headerClasses['attack']}">
+                        Attack</th>
+                    <th ng-click="orderRows('defense');" 
+                        ng-class="{headerOrder: headerClasses['defense'], regularHeader: !headerClasses['defense']}">
+                        Defense</th>
+                    <th ng-click="orderRows('specialAttack');" 
+                        ng-class="{headerOrder: headerClasses['specialAttack'], regularHeader: !headerClasses['specialAttack']}">
+                        Special Attack</th>
+                    <th ng-click="orderRows('specialDefense');" 
+                        ng-class="{headerOrder: headerClasses['specialDefense'], regularHeader: !headerClasses['specialDefense']}">
+                        Special Defense</th>
+                    <th ng-click="orderRows('speed');" 
+                        ng-class="{headerOrder: headerClasses['speed'], regularHeader: !headerClasses['speed']}">
+                        Speed</th>
+                </tr>
+                <tr ng-repeat="pokemon in filteredList = (list | filter:pokemonFilter | filter:statFilterFunction(statFilter) | orderBy:order:reverse)">
+                    <td class="pokemonName">
+                        <span class="cursorLink" ng-click="changeToSpecificPage(pokemon)">{{pokemon.name}}</span>
+                    </td>
+                    <td><span ng-repeat="type in pokemon.types track by $index" class="typeBlock {{type}}">{{type}}</span></td>
+                    <td>{{pokemon.total}}</td>
+                    <td>{{pokemon.hp}}</td>
+                    <td>{{pokemon.attack}}</td>
+                    <td>{{pokemon.defense}}</td>
+                    <td>{{pokemon.specialAttack}}</td>
+                    <td>{{pokemon.specialDefense}}</td>
+                    <td>{{pokemon.speed}}</td>
+                </tr>
+            </table>
+        </div>

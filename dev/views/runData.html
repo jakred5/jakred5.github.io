@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Run Data</title>
+        <!-- build:css ../css/combinedrunData.min.css -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="pokemonHome.html">Pokemon Stats</a>
+            </nav>
+        </header>
+        <main class="runDataPage">
+            <a href="runningLog.html"><button class="newPostButton backButton">Back</button></a>
+            <section class="runChartSection">
+                <h1>Pace</h1>
+                <select onchange="createWeekDisplay('pace', this.value)">
+                    <option value="day">Day Display</option>
+                    <option value="week">Week Display</option>
+                </select>
+                <canvas id="paceChart" width="500" height="500"></canvas>
+            </section>
+            <section class="runChartSection">
+                <h1>Distance</h1>
+                <select onchange="createWeekDisplay('distance', this.value)">
+                    <option value="day">Day Display</option>
+                    <option value="week">Week Display</option>
+                </select>
+                <canvas id="distanceChart" width="500" height="500"></canvas>
+            </section>
+            <section class="runChartSection">
+                <h1>Time</h1>
+                <select  onchange="createWeekDisplay('time', this.value)">
+                    <option value="day">Day Display</option>
+                    <option value="week">Week Display</option>
+                </select>
+                <canvas id="timeChart" width="500" height="500"></canvas>
+            </section>
+        </main>
+        <!-- build:js ../js/combinedrunData.min.js -->
+        <script src="../js/authentication.js"></script>
+        <script src="/thirdParty/Chart.js-master/Chart.min.js"></script>
+        <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src="../js/utils.js"></script>
+        <script src="../js/runData.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
