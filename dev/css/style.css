@@ -676,3 +676,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', end
     background: linear-gradient(#6890f0,#386ceb);
     border-color: #1753E3;
 }
+
+#newCreatePlayerButton {
+    width: 120px;
+}
+
+#playerContent .mainTable th{
+    background-color: #E1E1D9;
+}

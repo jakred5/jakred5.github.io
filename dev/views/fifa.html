@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Fifa Home</title>
+        <!-- build:css ../css/combinedAnimeHome.min.css -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <span class="navDivider">|</span>
+                <a href="blog.html">Blog</a>
+                <span class="navDivider">|</span>
+                <a href="runningLog.html">Running</a>
+                <span class="navDivider">|</span>
+                <a href="animeHome.html">Anime</a>
+                <span class="navDivider">|</span>
+                <a href="pokemonHome.html">Pokemon Stats</a>
+                <span class="navDivider">|</span>
+                <a href="fifa.html">Fifa</a>
+            </nav>
+        </header>
+        <main>
+            <section class="heading">
+                <h1>Fifa Career</h1>
+                <button id="newCreatePlayerButton" class="newPostButton" onclick="createPlayer.show()">Create Player</button>
+                <div class="insertPost" id="createPlayer">
+                    <h2>Create Player</h2>
+                    <form onsubmit="createPlayer.create(); return false;">
+                        <table class="createForm">
+                            <tbody>
+                                <tr>
+                                    <td><label>First Name:&nbsp;</label></td>
+                                    <td><input type="text" placeholder="First Name" id="firstName" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Last Name:&nbsp;</label></td>
+                                    <td><input type="text" placeholder="Last Name" id="lastName" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Position:&nbsp;</label></td>
+                                    <td>
+                                        <select id="position" required>
+                                            <option value="ST">ST</option>
+                                            <option value="LM">LM</option>
+                                            <option value="RM">RM</option>
+                                            <option value="CAM">CAM</option>
+                                            <option value="CM">CM</option>
+                                            <option value="CDM">CDM</option>
+                                            <option value="LB">LB</option>
+                                            <option value="RB">RB</option>
+                                            <option value="CB">CB</option>
+                                            <option value="GK">GK</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label>Country:&nbsp;</label></td>
+                                    <td><input type="text" placeholder="Country" id="country" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Overall:&nbsp;</label></td>
+                                    <td><input type="number" placeholder="Overall" id="overall" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Birth Date:&nbsp;</label></td>
+                                    <td><input type="date" id="birthDate" required></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="submitPostButton">Create</button>
+                        <button type="button" class="submitPostButton" onclick="createPlayer.hide()">Cancel</button>
+                    </form>
+                </div>
+            </section>
+            <section id="playerContent" class="content">
+                <table class="mainTable">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Position</th>
+                            <th>Country</th>
+                            <th>Overall</th>
+                            <th>Age</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mainTableBody"></tbody>
+                </table>
+            </section>
+        </main>
+        <!-- build:js ../js/combinedAnimeHome.min.js -->
+        <script src="../js/authentication.js"></script>
+        <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src='/thirdParty/firebase.js'></script>
+        <script src="../js/utils.js"></script>
+        <script src="../js/db.js"></script>
+        <script src="../js/fifa.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
