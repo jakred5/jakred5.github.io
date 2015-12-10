@@ -34,9 +34,9 @@ All return types are strings
 function StringUtils(){
     //converts a date object into a string
     this.date = function(date){
-        var day = date.getDate();
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
+        var day = date.getUTCDate();
+        var month = date.getUTCMonth() + 1;
+        var year = date.getUTCFullYear();
         return (month + "/" + day + "/" + year);
     };
     
@@ -100,6 +100,19 @@ function StringUtils(){
         var day = date.substring(8);
         return month + "/" + day + "/" + year;
     }
+}
+
+function DateUtils(){
+    //takes two dates and finds the age between oldate and currentdate
+    this.getAge = function(currentDate, oldDate){
+        var age = currentDate.getUTCFullYear() - oldDate.getUTCFullYear();
+        var m = currentDate.getUTCMonth() - oldDate.getUTCMonth();
+        if (m < 0 || (m === 0 && currentDate.getUTCDate() < oldDate.getUTCDate())) 
+        {
+            age--;
+        }
+        return age;
+    };
 }
 
 function JsonUtils(){

@@ -14,5 +14,9 @@ function DB(){
         }, function (errorObject) {
             console.log("The read failed: " + errorObject.code);
         });
-    }
+    };
+    this.update = function(path, updateObject){
+        var ref = new Firebase(url + path);
+        ref.update(updateObject);
+    };
 }

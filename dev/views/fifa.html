@@ -4,6 +4,7 @@
     <head>
         <title>Fifa Home</title>
         <!-- build:css ../css/combinedFifa.min.css -->
+        <link rel="stylesheet" href="/thirdParty/jquery-ui-1.11.4.custom/jquery-ui.css">
         <link rel="stylesheet" href="../css/style.css">
         <!-- endbuild -->
     </head>
@@ -80,12 +81,13 @@
                 <table class="mainTable">
                     <thead>
                         <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Position</th>
-                            <th>Country</th>
-                            <th>Overall</th>
-                            <th>Age</th>
+                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('firstName')">First Name</th>
+                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('lastName')">Last Name</th>
+                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('position')">Position</th>
+                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('country')">Country</th>
+                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('overall')">Overall</th>
+                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('age')">Age</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody id="mainTableBody"></tbody>
@@ -95,6 +97,7 @@
         <!-- build:js ../js/combinedFifa.min.js -->
         <script src="../js/authentication.js"></script>
         <script src="/thirdParty/jquery-2.1.4.min.js"></script>
+        <script src="/thirdParty/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
         <script src='/thirdParty/firebase.js'></script>
         <script src="../js/utils.js"></script>
         <script src="../js/db.js"></script>
