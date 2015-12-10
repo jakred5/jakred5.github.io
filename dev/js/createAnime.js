@@ -118,26 +118,18 @@ function createAnime(){
 }
 
 function retrieveAnimePosts(){
-    posts = retrieve("animeList");
-    if(posts == null){
-        var ref = new Firebase(url + 'animePosts');
-        ref.on("value", function(snapshot) {
-            posts = snapshot.val();
-            store("animeList", posts);
-            for(x in posts){
-                var post = posts[x];
-                createAnimePostDiv(x, post.imageSrc, post.name);
-            }
-            ref.off("value");
-        }, function (errorObject) {
-            console.log("The read failed: " + errorObject.code);
-        });
-    }else{
+    var ref = new Firebase(url + 'animePosts');
+    ref.on("value", function(snapshot) {
+        posts = snapshot.val();
+        store("animeList", posts);
         for(x in posts){
             var post = posts[x];
             createAnimePostDiv(x, post.imageSrc, post.name);
         }
-    }
+        ref.off("value");
+    }, function (errorObject) {
+        console.log("The read failed: " + errorObject.code);
+    });
 }
 
 function viewAnimePost(el){
