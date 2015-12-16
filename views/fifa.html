@@ -75,20 +75,37 @@
                 </div>
             </section>
             <section id="playerContent" class="content">
-                <table class="mainTable">
-                    <thead>
-                        <tr>
-                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('firstName')">First Name</th>
-                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('lastName')">Last Name</th>
-                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('position')">Position</th>
-                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('country')">Country</th>
-                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('overall')">Overall</th>
-                            <th onclick="fifaTable.changeHeaderColor(this); fifaTable.sort('age')">Age</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="mainTableBody"></tbody>
-                </table>
+                <div class="playerTableWrapper">
+                    <h2>Roster</h2>
+                    <table class="mainTable playerTable">
+                        <thead>
+                            <tr>
+                                <th onclick="fifaTable.sortHeader(this, 'firstName')">First Name</th>
+                                <th onclick="fifaTable.sortHeader(this, 'lastName')">Last Name</th>
+                                <th onclick="fifaTable.sortHeader(this, 'position')">Position</th>
+                                <th onclick="fifaTable.sortHeader(this, 'country')">Country</th>
+                                <th onclick="fifaTable.sortHeader(this, 'overall')">Overall</th>
+                                <th onclick="fifaTable.sortHeader(this, 'age')">Age</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="mainTableBody"></tbody>
+                    </table>
+                </div>
+                <div class="playerTableWrapper goalTableWrapper">
+                    <h2>Goals</h2>
+                    <table class="mainTable playerTable">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th onclick="fifaTable.sortHeader(this, 'goals')">Goals</th>
+                                <th onclick="fifaTable.sortHeader(this, 'average')">Average</th>
+                            </tr>
+                        </thead>
+                        <tbody id="goalTableBody"></tbody>
+                    </table>
+                </div>
             </section>
         </main>
         <script src="../js/combinedFifa.min.js"></script>

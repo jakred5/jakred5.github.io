@@ -133,7 +133,7 @@ textarea {
 
 .newPostButton {
     background-color: #2B5192;
-    width: 120px;
+    width: 12xf.0px;
     height: 30px;
     color: white;
     font-size: 14px;
@@ -692,4 +692,73 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', end
 .playerIcon:hover {
     opacity: 0.5;
     cursor: pointer;
+}
+
+.playerStat {
+    font-size: 12px;
+    width: 300px;
+    min-height: 200px;
+    background-color: #2F2F2F;
+    z-index: 100;
+    position: absolute;
+    left: 300px;
+    display: none;
+    color: white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.goalList {
+    max-height: 120px;
+    overflow: auto;
+    list-style: none;
+    text-align: left;
+}
+
+.playerStat table td {
+    background-color: transparent;
+    border: none;
+}
+
+.playerStat button {
+    position: absolute;
+    bottom: 5px;
+    left: 70px;
+    background-color: #2B5192;
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.insertPlayerGoals {
+    min-height: 150px;
+    margin-top: -20px;
+    width: 220px;
+    left: 380px;
+}
+
+.playerTableWrapper {
+    margin-top: 30px;
+    width: 570px;
+    margin-left: 5%;
+    padding: 0px 30px 30px 30px;
+    background-color: #99CC99;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.playerTable {
+    width: 100%;
+    margin: auto;
+}
+
+.goalTableWrapper {
+    width: 350px;
+}
+
+.playerTableWrapper h2{
+    text-align: center;
 }
