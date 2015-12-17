@@ -185,7 +185,17 @@ var createPlayer = {
         var lastNameCell = domUtils.createTextElement("td", player.lastName);
         var positionCell = domUtils.createTextElement("td", player.position);
         var countryCell = domUtils.createTextElement("td", player.country);
-        var overallCell = domUtils.createTextElement("td", player.overall);
+        var overallCell = $("<td></td>");
+        var overallSpan = $("<span></span>", {
+            text: player.overall,
+            "class": "overallSpan"
+        });
+        var overallInput = $("<input>", {
+            type: "number",
+            "class": "overallInput",
+            value: player.overall
+        });
+        overallCell.append(overallSpan).append(overallInput);
         var optionsCell = createPlayer.createOptionsCell(player.goalList, goalInfo);
         
         newRow.append(firstNameCell).append(lastNameCell).append(positionCell)
@@ -248,6 +258,10 @@ var fifaTable = {
         }else{
             statDiv.css("display", "block");
         }
+    },
+    toggleOverallInput: function(el1, el2){
+        el1.css("display", "none");
+        el2.css("display", "inline");
     }
 };
 
@@ -354,6 +368,20 @@ var playerUtils = {
         fifaTable.showStats(parentDiv);
         el.goals.value = "";
         el.season.value = "";
+    },
+    updateOverall: function(el){
+        var overall = el.val();
+        var span = el.prev();
+        if(overall !== "" || !isNaN(overall)){
+            overall = parseInt(overall);
+            var row = el.parent().parent();
+            var key = row.attr("data-id");
+            db.update("players/" + key, {overall: overall});
+            span.html(overall);
+            row.attr("data-overall", overall);
+            playersObject[key].overall = overall;
+        }
+        fifaTable.toggleOverallInput(el, span);
     }
 }
 
@@ -362,5 +390,11 @@ $(document).ready(function() {
     $(document).on("click", ".ui-icon-trash", {"el": $(this)}, fifaUtils.remove);
     $(document).on("click", ".ui-icon-plus, .ui-icon-person", function(){
         fifaTable.showStats($(this).prev());
+    });
+    $(document).on("click", ".overallSpan", function(){
+        fifaTable.toggleOverallInput($(this), $(this).next());
+    });
+    $(document).on("blur", ".overallInput", function(){
+        playerUtils.updateOverall($(this));
     });
 });

@@ -762,3 +762,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', end
 .playerTableWrapper h2{
     text-align: center;
 }
+
+.overallInput {
+    width: 30px;
+    display: none;
+}
+
+.overallSpan:hover {
+    cursor: pointer;
+}
