@@ -1,5 +1,6 @@
 var url = 'https://torrid-fire-9340.firebaseio.com/';
 var posts = {};
+var db = new DB();
 
 function showCreateAnime(){
     $("#newCreateAnimeButton").hide();

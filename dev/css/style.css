@@ -771,3 +771,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', end
 .overallSpan:hover {
     cursor: pointer;
 }
+
+#tourneySchedule {
+    margin: 50px;
+}
+
+#matchdayList {
+    text-align: center;
+}
+
+#matchdayList > div {
+    margin-bottom: 50px;
+    background-color: #99CC99;
+}
+
+.matchdayHeader {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.matchListElement {
+    border-top: 1px solid silver;
+    background-color: #313433;
+    color: white;
+    height: 60px;
+    display: table;
+    width: 100%;
+}
+
+.matchInfo {
+    vertical-align: middle;
+    display: table-cell;
+    width: 50%;
+}
+
+.teamName {
+    font-size: 24px;
+}
