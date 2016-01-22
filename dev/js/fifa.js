@@ -7,7 +7,7 @@ var domUtils = new DomUtils();
 var playersObject = {}; //local object representing players, needs to be updated when db updated
 var sortMultiplier = 1;
 var previousSort = "";
-var currentSeason = 3;
+var currentSeason = 2;
 
 var sortFunctions = {
     "firstName": function(o1, o2){
